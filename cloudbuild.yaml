@@ -24,14 +24,14 @@ steps:
     args: 
       - 'build'
       - '-t'
-      - 'us-east1-docker.pkg.dev/gcp-project01-456605/mydockerreg/myapp:$BUILD_ID'
+      - 'us-central1-docker.pkg.dev/gcp-project01-456605/cicd/myapp:$BUILD_ID'
       - '.'
   # Step 4: Push Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: 
       - 'push'
-      - 'us-east1-docker.pkg.dev/gcp-project01-456605/mydockerregp/myapp:$BUILD_ID'
+      - 'us-central1-docker.pkg.dev/gcp-project01-456605/cicd/myapp:$BUILD_ID'
       
 images:
-  - 'us-east1-docker.pkg.dev/gcp-project01-456605/mydockerreg/myapp:$BUILD_ID'
+  - 'us-central1-docker.pkg.dev/gcp-project01-456605/cicd/myapp:$BUILD_ID'
 logsBucket: "gs://mybucket210195"
