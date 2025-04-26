@@ -34,4 +34,4 @@ steps:
       
 images:
   - 'us-east1-docker.pkg.dev/gcp-project01-456605/mydockerreg/myapp:$BUILD_ID'
-logsBucket: "gs://amit23compow"
+logsBucket: "gs://mybucket210195"
